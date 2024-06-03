@@ -1,0 +1,660 @@
+  .tutorial-join {
+      padding-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* Menengahkan secara horizontal */
+      flex-wrap: wrap;
+      text-align: center;
+      /* Menengahkan teks secara horizontal */
+  }
+
+  h1 {
+      font-weight: bold;
+      font-size: 80px;
+      color: white;
+  }
+
+  h4 {
+      margin-bottom: 0 !important;
+      font-weight: bold;
+      font-size: 60px;
+      color: white;
+  }
+
+  .content-tutorial .information p {
+      text-align: center;
+      font-size: 32px;
+
+  }
+
+  .content-tutorial h4 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 0px;
+      font-style: italic
+  }
+
+  .content-tutorial strong {
+      color: black;
+      font-weight: 800 !important;
+  }
+
+  .content-tutorial {
+      padding-top: 30px;
+      margin-left: 50px;
+      margin-right: 50px;
+      padding-left: 50px;
+      padding-right: 50px;
+      height: auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      border-radius: 15px;
+      background: white;
+  }
+
+  .content-tutorial img {
+      height: auto;
+      display: flex;
+      width: 100%;
+      border-radius: 20px;
+  }
+
+  .icon {
+      height: 40px !important;
+      width: 40px !important;
+      border-radius: 0 !important;
+  }
+
+  .intruksi h4 {
+      color: black;
+  }
+
+  @media (max-width:600px) {
+      .content-tutorial .information p {
+
+          font-size: 12px !important;
+
+      }
+
+      #imgQuestion {
+          width: 300px !important;
+          height: 200px !important;
+      }
+
+      .content-tutorial h4 {
+
+          font-size: 14px !important;
+          width: 100%;
+          text-align: center;
+      }
+
+      .icon {
+          height: 20px !important;
+          width: 20px !important;
+
+      }
+
+      .content-tutorial {
+
+          margin: 20px !important;
+          padding: 20px !important;
+
+      }
+
+      .tutorial-join h1 {
+          font-size: 40px !important;
+          font-weight: bold !important;
+          align-items: flex-end;
+          text-shadow: 0px 4px 4px #00000040;
+          margin: 0 !important;
+
+      }
+
+      h4 {
+          font-size: 32px !important;
+      }
+
+
+
+      .tutorial-join {
+          margin-left: 10px !important;
+          padding-top: 20px !important;
+      }
+
+      .question p {
+          font-size: 12px !important;
+      }
+
+      .question div {
+          font-size: 12px !important;
+          padding-left: 10px !important;
+      }
+
+      .answer-option label {
+          font-size: 12px !important;
+      }
+
+      .description {
+          margin-left: 20px !important;
+          margin-top: 20px;
+          margin-right: 20px !important;
+          padding-bottom: 0px !important;
+          display: flex !important;
+          justify-content: space-between !important;
+      }
+
+      .description h6 {
+          font-size: 10px !important;
+          width: 100% !important;
+          padding-right: 10px !important;
+      }
+
+      .description h6 img {
+          width: 12px !important;
+          height: 12px !important;
+      }
+
+      .answer-option input {
+          height: 10px !important;
+          width: 10px !important;
+      }
+
+      .question-overlay {
+
+          width: 100% !important;
+          height: 50% !important;
+          max-width: 500px I !important;
+
+      }
+
+      .alert-answer {
+          width: 100% !important;
+          height: 50% !important;
+          max-width: 200px I !important;
+      }
+
+      #answerButton {
+          font-size: 10px !important;
+          width: auto !important;
+          height: 40px !important;
+
+      }
+
+      #previousButton {
+          font-size: 10px !important;
+          width: 80px !important;
+          height: 40px !important;
+
+      }
+
+      #answerList img {
+          margin: 0 auto !important;
+          width: 50% !important;
+          height: auto !important;
+          display: block !important;
+      }
+
+      /* .alert {
+          max-width: 100%;
+          padding: 0px;
+      } */
+
+      .alert-success-answer {
+
+          width: 100% !important;
+          height: 50% !important;
+          max-width: 200px I !important;
+
+
+          /* Ubah nilai height sesuai kebutuhan */
+      }
+
+      .alert-answer p {
+
+          font-size: 10px !important;
+      }
+
+      .alertSuccess-answer p {
+          font-size: 10px !important;
+      }
+
+      .alertSuccess-answer a {
+          font-size: 10px !important;
+      }
+
+
+      /* 
+      .alert-answer {
+
+          width: 50% !important;
+          height: auto !important;
+          height: 50% !important;
+          margin: 0 !important;
+          box-sizing: border-box !important;
+      } */
+
+      #restartButton {
+
+          padding: 0 !important;
+          margin: 0 !important;
+      }
+
+      #restartButton img {
+          height: 12px !important;
+          width: 12px !important;
+          margin: 0 !important;
+          padding: 0 !important;
+
+      }
+
+
+
+      .video-container {
+
+          height: 50% !important;
+          width: 80% !important;
+          margin: 10px !important;
+
+          /*max-height: 300px !important;*/
+      }
+
+      .video-container video {
+          width: 100% !important;
+          height: 100% !important;
+      }
+  }
+
+  @media (min-width: 601px) and (max-width:800px) {
+      .answer-option input {
+          height: 12px !important;
+          width: 12px !important;
+      }
+
+      .question p {
+          font-size: 14px !important;
+      }
+
+      .answer-option label {
+          font-size: 12px !important;
+      }
+
+
+      #imgQuestion {
+          width: 300px !important;
+          height: auto !important;
+      }
+
+      #restartButton img {
+          height: 32px !important;
+          width: 32px !important;
+          margin: 0 !important;
+          padding: 0 !important;
+
+      }
+
+      .intruksi {
+          text-align: center !important;
+          /* Center align for screen width between 601px and 1400px */
+          margin: 0 auto;
+          /* Center the whole block */
+      }
+
+      .intruksi h4 {
+          font-size: 24px !important;
+          width: 100%;
+          text-align: center !important;
+
+      }
+
+      .content-tutorial .information p {
+
+          font-size: 20px !important;
+
+      }
+
+      .icon {
+          height: 40px !important;
+          width: 40px !important;
+
+      }
+
+      .content-tutorial {
+
+          padding-left: 20px;
+          padding-right: 20px;
+
+      }
+
+      .tutorial-join {
+          margin-left: 12px !important;
+          padding-top: 20px !important;
+      }
+
+      .tutorial-join h1 {
+          font-size: 40px !important;
+
+      }
+
+      h4 {
+          font-size: 32px !important;
+      }
+
+      .question-overlay {
+          width: 100% !important;
+          height: 500px !important;
+          margin-bottom: 10px !important;
+          max-width: 1000px !important;
+      }
+
+      .alert-success-answer {
+          width: 100% !important;
+          height: 500px !important;
+          margin-bottom: 5px !important;
+          max-width: 1000px !important;
+      }
+
+      .alert-answer {
+          width: 100% !important;
+          height: 500px !important;
+          margin-bottom: 5px !important;
+          max-width: 1000px !important;
+      }
+
+      .description {
+          margin-left: 20px !important;
+          margin-top: 20px;
+          margin-right: 20px !important;
+          margin-bottom: 0px !important;
+          display: flex !important;
+          justify-content: space-between !important;
+      }
+
+      .description h6 {
+          font-size: 10px !important;
+          width: 100% !important;
+          padding-right: 10px !important;
+      }
+
+      .description h6 img {
+          width: 12px !important;
+          height: 12px !important;
+      }
+
+      .video-container {
+          height: 100% !important;
+          width: 80% !important;
+          margin: 10px !important;
+
+
+          /*max-height: 300px !important;*/
+      }
+
+      .video-container video {
+          width: 100% !important;
+          height: 100% !important;
+
+      }
+
+  }
+
+
+  /* 
+  @media (min-width:1200px) {
+      .alert-success-answer {
+          height: 80% !important;
+          margin: 0 !important;
+
+      }
+
+      #restartButton img {
+          height: 24px !important;
+          width: 24px !important;
+      }
+
+  } */
+  #restartButton img {
+      height: 48px !important;
+      width: 48px !important;
+  }
+
+  .video-container {
+      margin: 0px 10px 10px 10px !important;
+      /* height: 70%; */
+      width: 500px;
+      display: flex;
+      position: relative;
+      /* width: auto; */
+      align-items: center !important;
+      justify-content: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+
+      /* Untuk memastikan kontennya tetap di dalam container */
+      /*max-height: 300px !important;*/
+  }
+
+
+  strong {
+      white-space: nowrap;
+      /* Agar tulisan "Video:" tidak wrap ke baris berikutnya */
+      margin-right: 5px;
+      margin-left: 5px;
+      color: #C51915;
+  }
+
+
+  .video-container video {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+      background-color: #2d2f31;
+      border-radius: 20px;
+  }
+
+
+
+
+
+
+  .question-overlay {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      width: 90%;
+      /* Ubah nilai width sesuai kebutuhan */
+      height: 40%;
+      margin-bottom: 10;
+      z-index: 2;
+      display: none;
+      overflow-y: auto;
+      border-radius: 20px;
+
+  }
+
+  .question {
+      display: flex;
+      flex-direction: column;
+  }
+
+
+
+  .alert-answer {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      overflow-y: auto;
+      transform: translate(-50%, -50%);
+      background: white;
+      border: 1px solid #ccc;
+      display: none;
+      width: 50%;
+      /* Adjust the width as needed for mobile devices */
+      /* Set a maximum width for larger screens */
+      height: 40%;
+      /* Allow the height to adjust based on content */
+      margin: 0;
+      padding: 10px;
+
+  }
+
+  /* .alert {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  } */
+
+  #answerList img {
+      margin: 0 auto;
+      display: block;
+  }
+
+  #alert-form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+  }
+
+  .alertSuccess-answer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+  }
+
+  .alert p {
+      font-weight: bold;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center !important;
+  }
+
+
+
+  .alert-success-answer {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      overflow-y: auto;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      display: none;
+      margin: 0;
+      width: 50%;
+      height: 40%;
+      /* Ubah nilai height sesuai kebutuhan */
+  }
+
+  .alertSuccess-answer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+  }
+
+  .alertSuccess-answer p {
+      font-weight: bold;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center !important;
+  }
+
+  .alertSuccess strong {
+      color: #C51915;
+  }
+
+  .question ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .question p {
+      font-size: 20px;
+  }
+
+  ul li {
+      list-style: none;
+  }
+
+  #answerButton {
+      color: black;
+      border: none;
+      float: right;
+      width: auto;
+      height: 30px;
+      font-weight: bold;
+  }
+
+  #previousButton {
+      background-color: #FFD600;
+      color: black;
+      border: none;
+      float: left;
+      width: auto;
+      height: 30px;
+      font-weight: bold;
+  }
+
+  /* Tambahkan CSS untuk membuat radio button sejajar dengan teks pertanyaan */
+  .answer-option label {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      /* margin-bottom: 10px; */
+      /* Sesuaikan dengan kebutuhan Anda */
+  }
+
+
+  .answer-option {
+      display: flex;
+      align-items: baseline;
+      /* Align items at the baseline of the first line of text in each label */
+      margin-bottom: 10px;
+  }
+
+
+  .answer-option input {
+      margin-right: 10px;
+      margin-left: 15px;
+      align-items: start;
+      align-items: flex-start;
+      /* Sesuaikan dengan kebutuhan Anda */
+  }
+
+  #restartButton {
+      display: inline-block;
+      margin: 0;
+      /* Sesuaikan jarak dari teks */
+      padding: 0;
+      /* Hapus padding agar tidak ada ruang ekstra di sekitar gambar */
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+  }
+
+  .intruksi {
+      text-align: center !important;
+      /* Center align for screen width between 601px and 1400px */
+      margin: 0 auto;
+      /* Center the whole block */
+  }
+
+  .intruksi h4 {
+      width: 100%;
+      text-align: center !important;
+
+  }

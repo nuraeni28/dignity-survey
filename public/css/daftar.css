@@ -1,0 +1,678 @@
+/*****************************/
+/* Styling Header Image Menu */
+/* @import url('https://fonts.googleapis.com/css2?family=Moonserat:wght@900&display=swap'); */
+
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    max-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+    background-color: #B90B07 !important;
+    font-family: 'Montserrat' !important;
+    font-weight: 900;
+}
+
+
+
+section {
+    margin-left: 50px;
+}
+
+.title-join {
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Menengahkan secara horizontal */
+    flex-wrap: wrap;
+    text-align: center;
+    /* Menengahkan teks secara horizontal */
+}
+
+.title-join h1 {
+    font-weight: bold;
+    font-size: 50px !important;
+    color: white;
+}
+
+.title-deskripsi strong {
+    font-weight: bold;
+
+
+}
+
+.title-deskripsi {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Menengahkan secara horizontal */
+    flex-wrap: wrap;
+    text-align: center;
+    /* Menengahkan teks secara horizontal */
+}
+
+.title-deskripsi p {
+    font-size: 32px;
+    color: white;
+    margin: 8px !important;
+}
+
+.content {
+    padding-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    background: white;
+}
+
+@media (max-width:416px) {
+
+    header img {
+
+        height: 40px !important;
+    }
+
+    section {
+        margin-left: 0px;
+    }
+
+    .footer-content {
+        text-align: left !important;
+    }
+
+    .footer-menu {
+        margin-top: 10px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: left !important;
+        /* Membuat ikon Instagram dan Facebook dalam satu baris */
+
+    }
+
+    .title-join h1 {
+        font-size: 30px !important;
+        font-weight: bold !important;
+        align-items: flex-end;
+        text-shadow: 0px 4px 4px #00000040;
+        margin: 0 !important;
+
+    }
+
+    .title-deskripsi p {
+        font-size: 14px !important;
+        align-items: flex-end;
+
+    }
+
+    .content {
+        margin: 20px !important;
+        padding: 20px !important;
+    }
+
+    header {
+        height: 200px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 10px !important;
+    }
+
+    .title-join {
+        margin-left: 10px !important;
+        padding-top: 20px !important;
+    }
+
+    .formulir {
+        flex: 1;
+
+        /* Formulir akan memanfaatkan sisa lebar layar yang tersedia */
+        /* max-width: 500px;  */
+        /* Atur lebar maksimum formulir sesuai kebutuhan */
+        width: 100%;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        /* Jarak antara gambar dan formulir */
+        padding-left: 0 !important;
+    }
+
+    .content img {
+        height: auto !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        border-radius: 8% !important;
+        max-height: 20rem;
+    }
+
+    /* Adjusted margin for smaller screens */
+    .content img {
+        margin-right: 0 !important;
+
+    }
+
+    .wrap-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .formulir h6 {
+        font-size: 20px !important;
+    }
+
+    .formulir h1 {
+        font-size: 20px !important;
+    }
+
+
+
+}
+
+@media (min-width: 416px) and (max-width: 600px) {
+    .social-icons {
+        display: flex;
+        justify-content: left !important;
+        /* Membuat ikon Instagram dan Facebook dalam satu baris */
+
+    }
+
+    section {
+        margin-left: 0px;
+    }
+
+    header {
+        height: 200px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 10px !important;
+    }
+
+    .footer-content {
+        text-align: left !important;
+    }
+
+    header img {
+
+        height: 40px !important;
+    }
+
+
+
+    .title-join {
+        margin-left: 10px !important;
+        padding-top: 20px !important;
+    }
+
+    .title-join h1 {
+        font-size: 30px !important;
+        align-items: flex-end;
+        margin: 0 !important;
+    }
+
+    .title-deskripsi p {
+        font-size: 18px !important;
+    }
+
+    .content {
+        margin: 20px !important;
+        padding: 20px !important;
+    }
+
+    .formulir {
+        flex: 1;
+        /* Formulir akan memanfaatkan sisa lebar layar yang tersedia */
+        /* max-width: 500px;  */
+        /* Atur lebar maksimum formulir sesuai kebutuhan */
+        width: 100%;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        /* Jarak antara gambar dan formulir */
+        padding-left: 0 !important;
+    }
+
+    .content img {
+        height: 20rem !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px !important;
+    }
+
+    /* Adjusted margin for smaller screens */
+    .content img {
+        margin-right: 0 !important;
+    }
+
+    .wrap-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .formulir h6 {
+        font-size: 20px !important;
+    }
+
+    .formulir h1 {
+        font-size: 20px !important;
+    }
+
+    .footer-menu {
+        color: black;
+        font-size: 18px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+    }
+
+    /* .footer-menu {
+                position: relative;
+            } */
+
+    .footer-menu::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #B30A06;
+
+        /* Ganti warna sesuai kebutuhan, misalnya hitam (#000) */
+        width: 50px;
+        /* Lebar maksimum */
+        height: 2px;
+        /* Atur lebar garis bawah sesuai kebutuhan */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    a {
+        color: black !important;
+
+
+    }
+
+    a:hover {
+        color: #B30A06 !important;
+        text-decoration: none !important;
+        /* Warna teks saat di-hover (merah) */
+    }
+
+    .text-center {
+        text-align: left !important;
+    }
+
+    .social-icons {
+        display: flex;
+        /* Membuat ikon Instagram dan Facebook dalam satu baris */
+
+    }
+
+    .social-icon-container {
+        width: 32px;
+        /* Lebar kontainer bulat */
+        height: 32px;
+        /* Tinggi kontainer bulat */
+        background-color: #B30A06;
+        /* Warna latar belakang kontainer */
+        border-radius: 50%;
+        /* Membuat kontainer menjadi bentuk bulat */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        /* Margin untuk memberi jarak antara ikon dan elemen lain */
+        cursor: pointer;
+        /* Ganti kursor saat digulirkan */
+    }
+
+    .social-icon-container:hover {
+
+        background-color: #FFCE00;
+
+
+    }
+
+    .social-icon-container i {
+        color: white;
+        /* Warna ikon */
+        font-size: 16px;
+        /* Ukuran ikon */
+    }
+}
+
+@media (min-width: 601px) and (max-width:1500px) {
+    .social-icons {
+        display: flex;
+        justify-content: left !important;
+        /* Membuat ikon Instagram dan Facebook dalam satu baris */
+
+    }
+
+    section {
+        margin-left: 0px;
+    }
+
+    .footer-content {
+        text-align: left !important;
+        margin: 0 !important;
+    }
+
+    header {
+        height: 200px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 10px !important;
+    }
+
+
+    .title-join {
+        margin-left: 12px !important;
+        padding-top: 20px !important;
+    }
+
+    .content {
+        margin: 20px !important;
+        padding: 20px !important;
+    }
+
+    .content img {
+        margin-right: 0 !important;
+    }
+
+    .content img {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px !important;
+    }
+
+    .formulir {
+        flex: 1;
+
+        /* Formulir akan memanfaatkan sisa lebar layar yang tersedia */
+        /* max-width: 500px;  */
+        /* Atur lebar maksimum formulir sesuai kebutuhan */
+        width: 100%;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        /* Jarak antara gambar dan formulir */
+        padding-left: 0 !important;
+
+    }
+
+    .title-deskripsi p {
+        font-size: 20px;
+    }
+
+    /* .content {
+        padding: 10px !important;
+        margin-right: 0;
+        display: block;
+    } */
+}
+
+
+/* Menambahkan gaya CSS untuk membuat gambar lebih responsif */
+.content img {
+    max-width: 100%;
+    height: auto;
+    width: 700px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border-radius: 40px;
+}
+
+/* .footer-content {
+    text-align: center;
+    justify-content: center;
+} */
+
+.content img {
+    margin-right: 0 !important;
+
+}
+
+.formulir {
+    flex: 1;
+    /* Formulir akan memanfaatkan sisa lebar layar yang tersedia */
+    /* max-width: 500px;  */
+    /* Atur lebar maksimum formulir sesuai kebutuhan */
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    /* Jarak antara gambar dan formulir */
+    padding-left: 50px;
+
+}
+
+
+.input-group {
+    width: 97% !important;
+}
+
+.formulir h6 {
+    color: #B90B07;
+    font-size: 24px !important;
+    text-align: center;
+    font-weight: bold !important;
+
+}
+
+.formulir h1 {
+    color: black;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.formulir h1::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid #B30A06;
+    /* Ganti warna sesuai kebutuhan, misalnya hitam (#000) */
+    width: 50px;
+    /* Lebar maksimum */
+    height: 2px;
+    /* Atur lebar garis bawah sesuai kebutuhan */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.formulir .register {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.formulir .btn-flat {
+    background-color: #FFCE00;
+    /* Atur warna latar belakang menjadi merah */
+    color: #B90B07;
+    /* Atur warna teks menjadi putih atau sesuai preferensi Anda */
+    border-radius: 50px !important;
+    width: 200px;
+    display: block;
+    font-weight: bold;
+    /* Membuat tombol menjadi blok agar dapat menerapkan margin otomatis */
+    margin: 0 auto;
+
+    /* Menengahkan tombol secara horizontal */
+
+}
+
+.form-control {
+    border-radius: 0 !important;
+    width: 100% !important;
+    background-color: #D9D9D9 !important;
+}
+
+.custom-footer {
+    margin-top: 20px !important;
+    width: 100vw;
+}
+
+.footer-content {
+    text-align: left !important;
+    margin-left: 0px !important;
+    /* Contoh padding 10px */
+}
+
+.footer-content h6 {
+    font-weight: bold;
+}
+
+.footer-menu {
+    color: black;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+
+}
+
+/* .footer-menu {
+            position: relative;
+        } */
+
+.footer-menu::after {
+    content: '';
+    display: block;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to right, #B30A06 50%, #FFce00 50%);
+    border-image-slice: 1;
+    /* border-bottom: 3px solid #FFce00; */
+    /* Ganti warna sesuai kebutuhan, misalnya hitam (#000) */
+    width: 80px;
+    /* Lebar maksimum */
+    height: 2px;
+    /* Atur lebar garis bawah sesuai kebutuhan */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.social-icons {
+    display: flex !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    /* Membuat ikon Instagram dan Facebook dalam satu baris */
+
+}
+
+.social-icon-container {
+    margin: 0 10px 0 0 !important;
+    padding: 0 !important;
+}
+
+a {
+    color: black !important;
+    font-weight: 400 !important;
+
+
+}
+
+a:hover {
+    color: #B30A06 !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    /* Warna teks saat di-hover (merah) */
+}
+
+.text-center {
+    text-align: left !important;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    /* Membuat ikon Instagram dan Facebook dalam satu baris */
+
+}
+
+.social-icon-container {
+    width: 32px;
+    /* Lebar kontainer bulat */
+    height: 32px;
+    /* Tinggi kontainer bulat */
+    background-color: #B30A06;
+    /* Warna latar belakang kontainer */
+    border-radius: 50%;
+    /* Membuat kontainer menjadi bentuk bulat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    /* Margin untuk memberi jarak antara ikon dan elemen lain */
+    cursor: pointer;
+    /* Ganti kursor saat digulirkan */
+}
+
+.social-icon-container:hover {
+
+    background-color: #FFCE00;
+
+
+}
+
+.social-icon-container i {
+    color: white;
+    /* Warna ikon */
+    font-size: 16px;
+    /* Ukuran ikon */
+}
+
+
+#instagram-icon:hover i {
+    color: black;
+    /* Warna ikon saat elemen ditekan */
+}
+
+#facebook-icon:hover i {
+    color: black;
+    /* Warna ikon saat elemen ditekan */
+}
+
+.text-copyright {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.text-copyright::before {
+    padding-bottom: 30px;
+    content: '';
+    display: block;
+    border-top: 1px solid white;
+    /* Border dengan lebar 1px */
+    margin: 0 auto;
+    /* Mengatur posisi di tengah */
+    width: 80%;
+    /* Lebar border 50px */
+}
+
+.form-control-lg,
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-append>.btn {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+    font-weight: 100 !important;
+    line-height: 1.5 !important;
+    border-radius: 20px !important;
+    background-color: #D9D9D9 !important;
+    margin-right: -1px !important;
+}
+
+.input-group-lg>.input-group-append>.input-group-text,
+.input-group-lg>.input-group-prepend>.btn,
+.input-group-lg>.input-group-prepend>.input-group-text {
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    border-radius: 20px !important;
+    background-color: #D9D9D9 !important;
+}
