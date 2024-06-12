@@ -17,20 +17,7 @@ class Interview extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'interview_date',
-        'photo',
-        'location',
-        'long',
-        'lat',
-        'interview_schedule_id',
-        'respondent_id',
-        'owner_id',
-        'admin_id',
-        'start_time',
-        'end_time',
-        'record_file',
-    ];
+    protected $fillable = ['interview_date', 'photo', 'location', 'long', 'lat', 'interview_schedule_id', 'respondent_id', 'owner_id', 'admin_id', 'start_time', 'end_time', 'record_file'];
 
     protected $casts = [
         'interview_schedule_id' => 'integer',
@@ -63,6 +50,12 @@ class Interview extends Model
     public function data()
     {
         return $this->hasMany(InterviewData::class);
+    }
+    public function selectedTestData()
+    {
+        return $this->hasMany(InterviewData::class)->whereHas('question', function ($query) {
+            $query->where('selected_test', 1);
+        });
     }
 
     public function duration()

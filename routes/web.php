@@ -72,6 +72,7 @@ Route::get('customer/exportManual', 'App\Http\Controllers\Admin\CustomerControll
 Route::get('quick-count/export', 'App\Http\Controllers\Admin\QuickCountController@export')->name('quick-count.export');
 Route::get('quick-count/jumlah-suara-caleg', 'App\Http\Controllers\Admin\QuickCountController@countCaleg')->name('quick-count.countCaleg');
 Route::get('quick-count/jumlah-perolehan-suara', 'App\Http\Controllers\Admin\QuickCountController@countSumVote')->name('quick-count.countSumVote'); 
+Route::get('validity', 'App\Http\Controllers\Admin\ValidityController@index')->name('validity'); 
 
 Route::get('/linkstorage', function () {
     Artisan::call('storage:link');

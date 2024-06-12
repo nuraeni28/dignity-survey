@@ -48,4 +48,9 @@ class InterviewData extends Model
     {
         return $this->belongsTo(Respondent::class);
     }
+
+     public function question()
+    {
+        return $this->belongsTo(Question::class);
+    }
 }
