@@ -18,6 +18,8 @@ class ValidityController extends Controller
             ->has('interview')
             ->get();
 
+        // Menghitung jumlah interview
+        $countInterview = $interviews->count();
         $pointsMapping = [
             'tidak setuju' => 1,
             'kurang setuju' => 2,
@@ -53,11 +55,14 @@ class ValidityController extends Controller
         $summedXPoints = $results->groupBy('question_id')->map(function ($group) {
             return $group->sum('points');
         });
+
+        //Mengelompokkan poin berdasarkan question_id, menjumlahkan setiap point dan pangkat 2 hasil jumlahnya
         $summedSquaredXPoints = $results->groupBy('question_id')->map(function ($group) {
             $sum = $group->sum('points');
             return pow($sum, 2);
         });
-        // Mengelompokkan poin berdasarkan question_id, mempangkatkan setiap poin, dan menjumlahkan
+
+        // Mengelompokkan poin berdasarkan question_id, pangkat 2 setiap poin, dan menjumlahkan
         $squaredXSummedPoints = $results->groupBy('question_id')->map(function ($group) {
             return $group->reduce(function ($carry, $item) {
                 return $carry + pow($item['points'], 2);
@@ -69,7 +74,18 @@ class ValidityController extends Controller
             return $group->sum('points');
         });
 
+        // Menjumlahkan semua point pada summedPointsByInterview
         $summedYPoints = $summedPointsByInterview->sum();
+
+        // Menghitung jumlah pangkat 2 setiap poin pada summedPointsByInterview
+        $squaredYSummedPoints = $summedPointsByInterview
+            ->map(function ($points) {
+                return $points * $points;
+            })
+            ->sum();
+
+        //Pangkat 2 dari squaredYSummedPoints
+        $summedSquaredYPoints = $summedYPoints * $summedYPoints;
 
         // Mengelompokkan poin berdasarkan id dan menjumlahkan
         $calculatedXY = $results->map(function ($item) use ($summedPointsByInterview) {
@@ -82,11 +98,34 @@ class ValidityController extends Controller
                 'x*y' => $item['points'] * $summedY,
             ];
         });
+
         $summedCalculatedXY = $calculatedXY->groupBy('question_id')->map(function ($group) {
             return $group->sum('x*y');
         });
 
-        dd($results, $summedXPoints, $squaredXSummedPoints, $summedPointsByInterview, $summedYPoints, $calculatedXY, $summedCalculatedXY, $summedSquaredXPoints);
+        // Menghitung validitas untuk setiap question_id
+        $validity = $summedXPoints->map(function ($sumX, $questionId) use ($summedYPoints, $squaredYSummedPoints, $summedXPoints, $summedCalculatedXY, $countInterview, $squaredXSummedPoints, $summedSquaredYPoints, $summedSquaredXPoints) {
+            $sumX = $summedXPoints[$questionId] ?? 0;
+            $sumXY = $summedCalculatedXY[$questionId] ?? 0;
+            $squaredX = $squaredXSummedPoints[$questionId] ?? 0;
+            $summedSquaredX = $summedSquaredXPoints[$questionId] ?? 0;
+
+            $numerator = 10 * $sumXY - $sumX * $summedYPoints;
+            $denominator = (10 * $squaredX - $summedSquaredX) * (10 * $squaredYSummedPoints - $summedSquaredYPoints);
+
+            $calculationProcess = "(10 * $sumXY - $sumX * $summedYPoints) / (10 * $squaredX - $summedSquaredX) * (10 * $squaredYSummedPoints - $summedSquaredYPoints))";
+
+            echo "Question ID: $questionId\n";
+            echo "Calculation: $calculationProcess\n";
+
+            $result = $numerator / sqrt($denominator);
+
+            echo "Result (sqrt): $result\n";
+
+            return $result;
+        });
+
+        dd($validity, $countInterview, $results, $summedXPoints, $squaredXSummedPoints, $summedPointsByInterview, $summedYPoints, $squaredYSummedPoints, $summedSquaredYPoints, $calculatedXY, $summedCalculatedXY, $summedSquaredXPoints);
 
         // Mengembalikan data (opsional, ini tidak akan pernah dijalankan karena dd() menghentikan eksekusi)
 
