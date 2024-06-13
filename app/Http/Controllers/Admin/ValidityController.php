@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\InterviewSchedule;
 use App\Models\Interview;
+use App\Models\Question;
 
 use App\Models\User;
 
@@ -104,31 +105,37 @@ class ValidityController extends Controller
         });
 
         // Menghitung validitas untuk setiap question_id
-        $validity = $summedXPoints->map(function ($sumX, $questionId) use ($summedYPoints, $squaredYSummedPoints, $summedXPoints, $summedCalculatedXY, $countInterview, $squaredXSummedPoints, $summedSquaredYPoints, $summedSquaredXPoints) {
+        $validities = $summedXPoints->map(function ($sumX, $questionId) use ($summedYPoints, $squaredYSummedPoints, $summedXPoints, $summedCalculatedXY, $countInterview, $squaredXSummedPoints, $summedSquaredYPoints, $summedSquaredXPoints) {
             $sumX = $summedXPoints[$questionId] ?? 0;
             $sumXY = $summedCalculatedXY[$questionId] ?? 0;
             $squaredX = $squaredXSummedPoints[$questionId] ?? 0;
             $summedSquaredX = $summedSquaredXPoints[$questionId] ?? 0;
 
-            $numerator = 10 * $sumXY - $sumX * $summedYPoints;
-            $denominator = (10 * $squaredX - $summedSquaredX) * (10 * $squaredYSummedPoints - $summedSquaredYPoints);
+            $numerator = $countInterview * $sumXY - $sumX * $summedYPoints;
+            $denominator = ($countInterview * $squaredX - $summedSquaredX) * ($countInterview * $squaredYSummedPoints - $summedSquaredYPoints);
 
-            $calculationProcess = "(10 * $sumXY - $sumX * $summedYPoints) / (10 * $squaredX - $summedSquaredX) * (10 * $squaredYSummedPoints - $summedSquaredYPoints))";
+            // $calculationProcess = "($countInterview * $sumXY - $sumX * $summedYPoints) / ($countInterview * $squaredX - $summedSquaredX) * ($countInterview * $squaredYSummedPoints - $summedSquaredYPoints))";
 
-            echo "Question ID: $questionId\n";
-            echo "Calculation: $calculationProcess\n";
+            // echo "Question ID: $questionId\n";
+            // echo "Calculation: $calculationProcess\n";
 
             $result = $numerator / sqrt($denominator);
 
-            echo "Result (sqrt): $result\n";
+            // echo "Result (sqrt): $result\n";
+            $status = $result > 0.5494 ? 'Valid' : 'Invalid';
 
-            return $result;
+            $question = Question::find($questionId);
+
+            return [
+                'question_id' => $questionId,
+                'question' => $question->question,
+                'validity' => $result,
+                'status' => $status,
+            ];
         });
 
-        dd($validity, $countInterview, $results, $summedXPoints, $squaredXSummedPoints, $summedPointsByInterview, $summedYPoints, $squaredYSummedPoints, $summedSquaredYPoints, $calculatedXY, $summedCalculatedXY, $summedSquaredXPoints);
-
-        // Mengembalikan data (opsional, ini tidak akan pernah dijalankan karena dd() menghentikan eksekusi)
-
-        return $interviews;
+        // dd($validity, $countInterview, $results, $summedXPoints, $squaredXSummedPoints, $summedPointsByInterview, $summedYPoints, $squaredYSummedPoints, $summedSquaredYPoints, $calculatedXY, $summedCalculatedXY, $summedSquaredXPoints);
+        // dd($validities);
+        return view('admin.validity.index', compact('validities'));
     }
 }
